@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "node --watch index.js"
+    "dev": "node --watch index.js"
   },
   "keywords": [
     "capstone",
@@ -15,6 +15,8 @@
   "author": "sofia",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "knex": "^3.1.0",
+    "mysql2": "^3.11.4"
   }
 }
