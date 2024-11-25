@@ -1,0 +1,19 @@
+{
+  "name": "sofia-paco-brainstation-capstone-api",
+  "version": "1.0.0",
+  "description": "WugHugs capstone project for Brainstation's Software Engineering bootcamp",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "capstone",
+    "project"
+  ],
+  "author": "sofia",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
