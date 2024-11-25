@@ -1,5 +1,6 @@
 import express from "express";
-import userRoute from "./routes/users.js";
+import usersRoute from "./routes/users.js";
+import wugsRoute from "./routes/wugs.js";
 
 const app = express();
 
@@ -9,7 +10,8 @@ app.get("/", (req, res) => {
     res.send("Welcome to the WugHugs backend!");
 })
 
-app.use("/users", userRoute);
+app.use("/users", usersRoute);
+app.use("/wugs", wugsRoute);
 
 app.listen(PORT, () => {
     console.log(`Listening at PORT ${PORT}`);
