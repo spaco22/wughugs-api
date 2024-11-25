@@ -4,12 +4,12 @@
  */
 export function up(knex) {
     return knex.schema.createTable('users', (table) => {
-        table.increments('id').primary();
-        table.string('name').notNullable();
-        table.string('location').notNullable();
-        table.string('email').unique.notNullable();
-        table.string('password').notNullable();
-        table.string('password_confirmation').notNullable();
+        table.increments('user_id').primary();
+        table.string('user_name').notNullable();
+        table.string('user_location').notNullable();
+        table.string('user_email').unique.notNullable();
+        table.string('user_password').notNullable();
+        table.string('user_password_confirmation').notNullable();
         table.timestamp('created_at').defaultTo(knex.fn.now());
         table.timestamp('updated_at').defaultTo(knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'))
       });
