@@ -8,7 +8,7 @@ export function up(knex) {
         table.integer('user_id').unsigned().notNullable().references('user_id').inTable("users").onDelete("CASCADE");
         table.string('wug_name').notNullable();
         table.string('wug_species').notNullable();
-        table.string('wug_type').unique.notNullable();
+        table.string('wug_type').notNullable();
         table.string('wug_common_names').notNullable();
         table.string('wug_age').notNullable();
         table.timestamp('created_at').defaultTo(knex.fn.now());

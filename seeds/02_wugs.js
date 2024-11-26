@@ -4,8 +4,8 @@
  */
 export async function seed(knex) {
   // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
+  await knex('wugs').del()
+  await knex('wugs').insert([
     {
       wug_id: 1,
       user_id: 1,
@@ -14,8 +14,8 @@ export async function seed(knex) {
       wug_type: "Butterfly",
       wug_common_names: "Milkweed Butterfly, Orange Wing",
       wug_age: "3 months",
-      created_at: "2024-11-25T15:10:00Z",
-      updated_at: "2024-11-25T15:10:00Z"
+      created_at: "2024-11-25 15:10:00",
+      updated_at: "2024-11-25 15:10:00"
     },
     {
       wug_id: 2,
@@ -25,8 +25,8 @@ export async function seed(knex) {
       wug_type: "Tarantula",
       wug_common_names: "Chilean Rose Hair, Pink Toe",
       wug_age: "2 years",
-      created_at: "2024-11-25T15:11:00Z",
-      updated_at: "2024-11-25T15:11:00Z"
+      created_at: "2024-11-25 15:11:00",
+      updated_at: "2024-11-25 15:11:00"
     },
     {
       wug_id: 3,
@@ -36,8 +36,8 @@ export async function seed(knex) {
       wug_type: "Beetle",
       wug_common_names: "Hercules Beetle, Rhinoceros Beetle",
       wug_age: "5 months",
-      created_at: "2024-11-25T15:12:00Z",
-      updated_at: "2024-11-25T15:12:00Z"
+      created_at: "2024-11-25 15:12:00",
+      updated_at: "2024-11-25 15:12:00"
     },
     {
       wug_id: 4,
@@ -47,8 +47,8 @@ export async function seed(knex) {
       wug_type: "Moth",
       wug_common_names: "Luna Moth, Green Moth",
       wug_age: "1 month",
-      created_at: "2024-11-25T15:13:00Z",
-      updated_at: "2024-11-25T15:13:00Z"
+      created_at: "2024-11-25 15:13:00",
+      updated_at: "2024-11-25 15:13:00"
     },
     {
       wug_id: 5,
@@ -58,8 +58,8 @@ export async function seed(knex) {
       wug_type: "Spider",
       wug_common_names: "Bold Jumping Spider, Daring Jumping Spider",
       wug_age: "6 months",
-      created_at: "2024-11-25T15:14:00Z",
-      updated_at: "2024-11-25T15:14:00Z"
+      created_at: "2024-11-25 15:14:00",
+      updated_at: "2024-11-25 15:14:00"
     },
     {
       wug_id: 6,
@@ -69,8 +69,8 @@ export async function seed(knex) {
       wug_type: "Mantis",
       wug_common_names: "European Mantis, Praying Mantis",
       wug_age: "4 months",
-      created_at: "2024-11-25T15:15:00Z",
-      updated_at: "2024-11-25T15:15:00Z"
+      created_at: "2024-11-25 15:15:00",
+      updated_at: "2024-11-25 15:15:00"
     },
     {
       wug_id: 7,
@@ -80,8 +80,8 @@ export async function seed(knex) {
       wug_type: "Beetle",
       wug_common_names: "Lightning Bug, Blinking Beetle",
       wug_age: "2 months",
-      created_at: "2024-11-25T15:16:00Z",
-      updated_at: "2024-11-25T15:16:00Z"
+      created_at: "2024-11-25 15:16:00",
+      updated_at: "2024-11-25 15:16:00"
     },
     {
       wug_id: 8,
@@ -91,8 +91,8 @@ export async function seed(knex) {
       wug_type: "Spider",
       wug_common_names: "Black and Yellow Garden Spider, Writing Spider",
       wug_age: "3 months",
-      created_at: "2024-11-25T15:17:00Z",
-      updated_at: "2024-11-25T15:17:00Z"
+      created_at: "2024-11-25 15:17:00",
+      updated_at: "2024-11-25 15:17:00"
     },
     {
       wug_id: 9,
@@ -102,8 +102,8 @@ export async function seed(knex) {
       wug_type: "Butterfly",
       wug_common_names: "Old World Swallowtail, Yellow Butterfly",
       wug_age: "1 month",
-      created_at: "2024-11-25T15:18:00Z",
-      updated_at: "2024-11-25T15:18:00Z"
+      created_at: "2024-11-25 15:18:00",
+      updated_at: "2024-11-25 15:18:00"
     },
     {
       wug_id: 10,
@@ -113,8 +113,8 @@ export async function seed(knex) {
       wug_type: "Scorpion",
       wug_common_names: "Arizona Bark Scorpion, Bark Scorpion",
       wug_age: "6 months",
-      created_at: "2024-11-25T15:19:00Z",
-      updated_at: "2024-11-25T15:19:00Z"
+      created_at: "2024-11-25 15:19:00",
+      updated_at: "2024-11-25 15:19:00"
     }
   ]);
 };

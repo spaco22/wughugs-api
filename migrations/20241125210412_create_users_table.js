@@ -7,7 +7,7 @@ export function up(knex) {
         table.increments('user_id').primary();
         table.string('user_name').notNullable();
         table.string('user_location').notNullable();
-        table.string('user_email').unique.notNullable();
+        table.string('user_email').unique().notNullable();
         table.string('user_password').notNullable();
         table.string('user_password_confirmation').notNullable();
         table.timestamp('created_at').defaultTo(knex.fn.now());
