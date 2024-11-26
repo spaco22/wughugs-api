@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
 
 app.use("/users", usersRoute);
 app.use("/wugs", wugsRoute);
+app.use(express.json());
 
 app.listen(PORT, () => {
     console.log(`Listening at PORT ${PORT}`);
