@@ -7,6 +7,7 @@ export function up(knex) {
         table.increments('user_id').primary();
         table.string('user_firstname').notNullable();
         table.string('user_lastname').notNullable();
+        table.string('user_username').notNullable();
         table.string('user_city').notNullable();
         table.string('user_province').notNullable();
         table.string('user_email').unique().notNullable();
