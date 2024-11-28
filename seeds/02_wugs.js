@@ -19,7 +19,7 @@ export async function seed(knex) {
     },
     {
       wug_id: 2,
-      user_id: 2,
+      user_id: 1,
       wug_name: "Rosie",
       wug_species: "Grammostola rosea",
       wug_type: "Tarantula",
@@ -30,7 +30,7 @@ export async function seed(knex) {
     },
     {
       wug_id: 3,
-      user_id: 3,
+      user_id: 2,
       wug_name: "Hercules",
       wug_species: "Dynastes hercules",
       wug_type: "Beetle",
@@ -41,7 +41,7 @@ export async function seed(knex) {
     },
     {
       wug_id: 4,
-      user_id: 4,
+      user_id: 2,
       wug_name: "Luna",
       wug_species: "Actias luna",
       wug_type: "Moth",
@@ -52,7 +52,7 @@ export async function seed(knex) {
     },
     {
       wug_id: 5,
-      user_id: 5,
+      user_id: 3,
       wug_name: "Jumper",
       wug_species: "Phidippus audax",
       wug_type: "Spider",
@@ -63,7 +63,7 @@ export async function seed(knex) {
     },
     {
       wug_id: 6,
-      user_id: 6,
+      user_id: 3,
       wug_name: "Praying",
       wug_species: "Mantis religiosa",
       wug_type: "Mantis",
@@ -74,7 +74,7 @@ export async function seed(knex) {
     },
     {
       wug_id: 7,
-      user_id: 7,
+      user_id: 4,
       wug_name: "Firefly",
       wug_species: "Photinus pyralis",
       wug_type: "Beetle",
@@ -85,7 +85,7 @@ export async function seed(knex) {
     },
     {
       wug_id: 8,
-      user_id: 8,
+      user_id: 4,
       wug_name: "Orb",
       wug_species: "Argiope aurantia",
       wug_type: "Spider",
@@ -96,7 +96,7 @@ export async function seed(knex) {
     },
     {
       wug_id: 9,
-      user_id: 9,
+      user_id: 5,
       wug_name: "Swallowtail",
       wug_species: "Papilio machaon",
       wug_type: "Butterfly",
@@ -107,7 +107,7 @@ export async function seed(knex) {
     },
     {
       wug_id: 10,
-      user_id: 10,
+      user_id: 5,
       wug_name: "Scorpion",
       wug_species: "Centruroides sculpturatus",
       wug_type: "Scorpion",

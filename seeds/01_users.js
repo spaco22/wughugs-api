@@ -8,103 +8,74 @@ export async function seed(knex) {
   await knex('users').insert([
     {
       user_id: 1,
-      user_name: "John Doe",
-      user_location: "Ontario",
+      user_firstname: "John",
+      user_lastname: "Doe",
+      user_username: "johndoe1",
+      user_city: "Toronto",
+      user_province: "ON",
       user_email: "john.doe@example.com",
-      user_password: "password123",
-      user_password_confirmation: "password123",
+      user_pass: "password123",
+      user_pass_confirm: "password123",
+      user_img: "",
       created_at: "2024-11-25 15:00:00",
       updated_at: "2024-11-25 15:00:00"
     },
     {
       user_id: 2,
-      user_name: "Jane Smith", 
-      user_location: "Quebec",
+      user_firstname: "Jane",
+      user_lastname: "Smith",
+      user_username: "janesmith2",
+      user_city: "Vancouver",
+      user_province: "BC",
       user_email: "jane.smith@example.com",
-      user_password: "securepass456",
-      user_password_confirmation: "securepass456", 
-      created_at: "2024-11-25 15:01:00",
-      updated_at: "2024-11-25 15:01:00"
+      user_pass: "password456",
+      user_pass_confirm: "password456",
+      user_img: "",
+      created_at: "2024-11-25 15:00:00",
+      updated_at: "2024-11-25 15:00:00"
     },
     {
       user_id: 3,
-      user_name: "Robert Brown",
-      user_location: "British Columbia", 
-      user_email: "robert.brown@example.com",
-      user_password: "mypassword789",
-      user_password_confirmation: "mypassword789",
-      created_at: "2024-11-25 15:02:00", 
-      updated_at: "2024-11-25 15:02:00"
+      user_firstname: "William",
+      user_lastname: "Brown",
+      user_username: "williambrown3",
+      user_city: "Calgary",
+      user_province: "AB",
+      user_email: "william.brown@example.com",
+      user_pass: "secure789",
+      user_pass_confirm: "secure789",
+      user_img: "",
+      created_at: "2024-11-25 15:00:00",
+      updated_at: "2024-11-25 15:00:00"
     },
     {
       user_id: 4,
-      user_name: "Emily Davis",
-      user_location: "Alberta",
-      user_email: "emily.davis@example.com", 
-      user_password: "password321",
-      user_password_confirmation: "password321",
-      created_at: "2024-11-25 15:03:00",
-      updated_at: "2024-11-25 15:03:00"
+      user_firstname: "Emily",
+      user_lastname: "Taylor",
+      user_username: "emilytaylor4",
+      user_city: "Halifax",
+      user_province: "NS",
+      user_email: "emily.taylor@example.com",
+      user_pass: "password111",
+      user_pass_confirm: "password111",
+      user_img: "",
+      created_at: "2024-11-25 15:00:00",
+      updated_at: "2024-11-25 15:00:00"
     },
     {
       user_id: 5,
-      user_name: "Michael Wilson",
-      user_location: "Manitoba",
+      user_firstname: "Michael",
+      user_lastname: "Wilson",
+      user_username: "michaelwilson5",
+      user_city: "Montreal",
+      user_province: "QC",
       user_email: "michael.wilson@example.com",
-      user_password: "pass456word", 
-      user_password_confirmation: "pass456word",
-      created_at: "2024-11-25 15:04:00",
-      updated_at: "2024-11-25 15:04:00"
-    },
-    {
-      user_id: 6,
-      user_name: "Sarah Johnson",
-      user_location: "Saskatchewan", 
-      user_email: "sarah.johnson@example.com",
-      user_password: "!password!",
-      user_password_confirmation: "!password!",
-      created_at: "2024-11-25 15:05:00",
-      updated_at: "2024-11-25 15:05:00"
-    },
-    {
-      user_id: 7,
-      user_name: "David Thompson",
-      user_location: "Nova Scotia",
-      user_email: "david.thompson@example.com",
-      user_password: "oceanview123",
-      user_password_confirmation: "oceanview123",
-      created_at: "2024-11-25 15:06:00",
-      updated_at: "2024-11-25 15:06:00"
-    },
-    {
-      user_id: 8,
-      user_name: "Emma Martin",
-      user_location: "New Brunswick",
-      user_email: "emma.martin@example.com", 
-      user_password: "maritime456",
-      user_password_confirmation: "maritime456",
-      created_at: "2024-11-25 15:07:00",
-      updated_at: "2024-11-25 15:07:00"
-    },
-    {
-      user_id: 9,
-      user_name: "Ryan Campbell",
-      user_location: "Prince Edward Island",
-      user_email: "ryan.campbell@example.com",
-      user_password: "pei789!",
-      user_password_confirmation: "pei789!",
-      created_at: "2024-11-25 15:08:00",
-      updated_at: "2024-11-25 15:08:00"
-    },
-    {
-      user_id: 10,
-      user_name: "Laura Wilson",
-      user_location: "Newfoundland and Labrador",
-      user_email: "laura.wilson@example.com",
-      user_password: "eastcoast321",
-      user_password_confirmation: "eastcoast321",
-      created_at: "2024-11-25 15:09:00",
-      updated_at: "2024-11-25 15:09:00"
+      user_pass: "pass567",
+      user_pass_confirm: "pass567",
+      user_img: "",
+      created_at: "2024-11-25 15:00:00",
+      updated_at: "2024-11-25 15:00:00"
     }
-  ]);
+  ]
+  );
 };
