@@ -10,8 +10,8 @@ export function up(knex) {
         table.string('user_city').notNullable();
         table.string('user_province').notNullable();
         table.string('user_email').unique().notNullable();
-        table.string('user_password').notNullable();
-        table.string('user_password_confirmation').notNullable();
+        table.string('user_pass').notNullable();
+        table.string('user_pass_confirm').notNullable();
         table.string('user_img').notNullable();
         table.timestamp('created_at').defaultTo(knex.fn.now());
         table.timestamp('updated_at').defaultTo(knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'))
