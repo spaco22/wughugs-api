@@ -41,4 +41,8 @@ const userByID = async (req, res) => {
     }
 }
 
-export { users, userByID };
+const addUser = async(req, res) => {
+    res.send(`This is the add User route!`)
+};
+
+export { users, userByID, addUser };
