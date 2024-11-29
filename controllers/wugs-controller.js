@@ -5,8 +5,7 @@ const knex = initKnex(configuration);
 const wugs = async (req, res) => {
     // res.send("This is the wugs route");
     try {
-        const wugsData = await knex("wugs").join("users", "wugs.user_id", "=", "users.user_id").select("wugs.wug_id", "wugs.wug_id", "users.user_location", "wugs.wug_name", "wugs.wug_species", "wugs.wug_type", "wugs.wug_common_names ", "wugs.wug_age ");
-
+        const wugsData = await knex("wugs")
         res.json(wugsData);
     
     } catch(error) {
