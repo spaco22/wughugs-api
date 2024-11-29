@@ -42,7 +42,20 @@ const userByID = async (req, res) => {
 }
 
 const addUser = async(req, res) => {
-    res.send(`This is the add User route!`)
+    res.send(`This is the add User route!`);
+    console.log(req.body);
+
+    // try {
+    //     const usersData = await knex("users");
+
+
+    // } catch(error) {
+    //     console.error("Error adding new user", error);
+    //     res.status(500).json({
+    //         message: "Error adding new user",
+    //         status: 500
+    //     })
+    // }
 };
 
 export { users, userByID, addUser };
