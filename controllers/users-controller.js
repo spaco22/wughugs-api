@@ -42,20 +42,30 @@ const userByID = async (req, res) => {
 }
 
 const addUser = async(req, res) => {
-    res.send(`This is the add User route!`);
-    console.log(req.body);
+    // res.send(`This is the add User route!`);
+    // console.log(req.body);
 
-    // try {
-    //     const usersData = await knex("users");
+    //  if (!user_firstname || user_lastname || user_username  || user_city || user_province || user_email || user_pass   || user_pass_confirm){
+    //     return;
+    //  }
+
+    try {
+        const usersData = await knex("users").insert(req.body);
+        const newUserId = usersData[0];
+        const newUser = await knex("users").where({ user_id: newUserId }).first();
+        res.status(201).json({
+            message: "New user succesfully added!",
+            newUser
+        });
 
 
-    // } catch(error) {
-    //     console.error("Error adding new user", error);
-    //     res.status(500).json({
-    //         message: "Error adding new user",
-    //         status: 500
-    //     })
-    // }
+    } catch(error) {
+        console.error("Error adding new user", error);
+        res.status(500).json({
+            message: "Error adding new user",
+            status: 500
+        })
+    }
 };
 
 export { users, userByID, addUser };
