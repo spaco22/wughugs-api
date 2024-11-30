@@ -7,4 +7,6 @@ router.route("/").get(usersController.users).post(usersController.addUser);
 
 router.route("/:id").get(usersController.userByID);
 
+router.route("/:id/wugs").get(usersController.userWugs);
+
 export default router;

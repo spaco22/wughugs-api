@@ -41,6 +41,10 @@ const userByID = async (req, res) => {
     }
 }
 
+const userWugs = async(req, res) => {
+    res.send("This is the get user wugs route");
+};
+
 const addUser = async(req, res) => {
     // res.send(`This is the add User route!`);
     // console.log(req.body);
@@ -68,4 +72,4 @@ const addUser = async(req, res) => {
     }
 };
 
-export { users, userByID, addUser };
+export { users, userByID, userWugs, addUser };
