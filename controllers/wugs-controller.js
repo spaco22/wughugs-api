@@ -83,12 +83,13 @@ const editWug = async (req, res) => {
       .update(req.body);
 
     const editedWug = await knex("wugs")
-    .where({ wug_id: req.params.id }).first();
+      .where({ wug_id: req.params.id })
+      .first();
 
     res.status(200).json({
       message: "Wug succesfully updated",
       status: 200,
-      updated_wug: editedWug
+      updated_wug: editedWug,
     });
   } catch (error) {
     console.error(`Error updating wug with id: ${wug_id}`, error);

@@ -76,6 +76,9 @@ const addUser = async(req, res) => {
     //  }
 
     try {
+        // const path = req.file;
+        // console.log(path);
+        // req.body.user_img = path;
         const usersData = await knex("users").insert(req.body);
         const newUserId = usersData[0];
         const newUser = await knex("users").where({ user_id: newUserId }).first();
