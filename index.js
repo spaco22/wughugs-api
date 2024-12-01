@@ -12,12 +12,12 @@ app.use(cors({ origin: CORS_ORIGIN }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.send("Welcome to the WugHugs backend!");
-})
+  res.send("Welcome to the WugHugs backend!");
+});
 
 app.use("/users", usersRoute);
 app.use("/wugs", wugsRoute);
 
 app.listen(PORT, () => {
-    console.log(`Listening at PORT ${PORT}`);
-})
+  console.log(`Listening at PORT ${PORT}`);
+});
