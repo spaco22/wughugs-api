@@ -115,9 +115,9 @@ const delWug = async (req, res) => {
             });
         }
         res
-          .status(204)
           .json({
             message: `Wug with ID ${req.params.id} successfully deleted`,
+            status: 204
           });
       } catch (error) {
         console.error("Error deleting wug", error);
