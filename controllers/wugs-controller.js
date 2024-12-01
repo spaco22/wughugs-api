@@ -92,9 +92,9 @@ const editWug = async (req, res) => {
       updated_wug: editedWug,
     });
   } catch (error) {
-    console.error(`Error updating wug with id: ${wug_id}`, error);
+    console.error(`Error updating wug with id: ${req.params.id}`, error);
     res.status(500).json({
-      message: `Error updating wug with id: ${wug_id}`,
+      message: `Error updating wug with id: ${req.params.id}`,
     });
   }
 };
