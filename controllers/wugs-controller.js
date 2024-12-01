@@ -99,4 +99,33 @@ const editWug = async (req, res) => {
   }
 };
 
-export { wugs, wugById, addWug, editWug };
+const delWug = async (req, res) => {
+    // res.send("This is the delete route");
+    try {
+        const selectedWug = await knex("wugs")
+          .where({ wug_id: req.params.id })
+          .delete();
+    
+        if (selectedWug === 0) {
+          return res
+            .status(404)
+            .json({
+              message: `Wug with ID ${req.params.id} not found`,
+              status: 404,
+            });
+        }
+        res
+          .status(204)
+          .json({
+            message: `Wug with ID ${req.params.id} successfully deleted`,
+          });
+      } catch (error) {
+        console.error("Error deleting wug", error);
+        res.status(500).json({
+          message: `Error deleting wug`,
+          status: 500,
+        });
+      }
+}
+
+export { wugs, wugById, addWug, editWug, delWug };

@@ -7,6 +7,6 @@ const router = express.Router();
 
 router.route("/").get(wugsController.wugs).post(wugsController.addWug);
 
-router.route("/:id").get(wugsController.wugById).put(wugsController.editWug);
+router.route("/:id").get(wugsController.wugById).put(wugsController.editWug).delete(wugsController.delWug);
 
 export default router;
