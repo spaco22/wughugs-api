@@ -97,4 +97,33 @@ const addUser = async(req, res) => {
     }
 };
 
-export { users, userByID, userWugs, addUser };
+const delUser = async (req, res) => {
+    // res.send("This is the delete route");
+    try {
+        const selectedUser = await knex("users")
+          .where({ user_id: req.params.id })
+          .delete();
+    
+        if (selectedUser === 0) {
+          return res
+            .status(404)
+            .json({
+              message: `User with ID ${req.params.id} not found`,
+              status: 404,
+            });
+        }
+        res
+          .json({
+            message: `User with ID ${req.params.id} successfully deleted`,
+            status: 204
+          });
+      } catch (error) {
+        console.error("Error deleting user", error);
+        res.status(500).json({
+          message: `Error deleting user`,
+          status: 500,
+        });
+      }
+}
+
+export { users, userByID, userWugs, addUser, delUser };

@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.route("/").get(usersController.users).post(upload.single("img"), usersController.addUser);
 
-router.route("/:id").get(usersController.userByID);
+router.route("/:id").get(usersController.userByID).delete(usersController.delUser);
 
 router.route("/:id/wugs").get(usersController.userWugs);
 
