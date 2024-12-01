@@ -43,7 +43,25 @@ const wugById = async (req, res) => {
 }
 
 const addWug = async(req, res) => {
-    res.send("This is the add wug route");
+    // res.send("This is the add wug route");
+
+    try {
+        const wugsData = await knex("wugs").insert(req.body);
+        const newWugId = wugsData[0];
+        const newWug = await knex("wugs").where({ wug_id: newWugId }).first();
+        res.status(201).json({
+            message: "New wug succesfully added!",
+            newWug
+        });
+
+
+    } catch(error) {
+        console.error("Error adding new wug", error);
+        res.status(500).json({
+            message: "Error adding new wug",
+            status: 500
+        })
+    }
 }
 
 export { wugs, wugById, addWug };
