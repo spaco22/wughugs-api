@@ -42,4 +42,8 @@ const wugById = async (req, res) => {
     }
 }
 
-export { wugs, wugById };
+const addWug = async(req, res) => {
+    res.send("This is the add wug route");
+}
+
+export { wugs, wugById, addWug };
