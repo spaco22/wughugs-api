@@ -83,7 +83,9 @@ const editWug = async (req, res) => {
   // res.send("This is the put route");
 
   try {
-    // req.body.user_img = req.file.filename;
+    if(req.file) {
+      req.body.wug_img = req.file.filename;
+    }
     const editWug = await knex("wugs")
       .where({ wug_id: req.params.id })
       .update(req.body);
