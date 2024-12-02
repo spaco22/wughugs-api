@@ -3,7 +3,6 @@ import configuration from "../knexfile.js";
 const knex = initKnex(configuration);
 
 const users = async (req, res) => {
-  // res.send("This is the users route");
   try {
     const usersData = await knex("users");
     res.status(200).json(usersData);
@@ -17,7 +16,6 @@ const users = async (req, res) => {
 };
 
 const userByID = async (req, res) => {
-  // res.send("This is the users route");
   try {
     const usersFound = await knex("users").where({ user_id: req.params.id });
 
@@ -41,7 +39,6 @@ const userByID = async (req, res) => {
 };
 
 const userWugs = async (req, res) => {
-  // res.send("This is the get user wugs route");
   try {
     const usersFound = await knex("users").where({ user_id: req.params.id });
 
@@ -80,17 +77,7 @@ const userWugs = async (req, res) => {
 };
 
 const addUser = async (req, res) => {
-  // res.send(`This is the add User route!`);
-  // console.log(req.body);
-
-  //  if (!user_firstname || user_lastname || user_username  || user_city || user_province || user_email || user_pass   || user_pass_confirm){
-  //     return;
-  //  }
-
   try {
-    // const path = req.file;
-    // console.log(path);
-    // req.body.user_img = path;
     const usersData = await knex("users").insert(req.body);
     const newUserId = usersData[0];
     const newUser = await knex("users").where({ user_id: newUserId }).first();
@@ -108,7 +95,6 @@ const addUser = async (req, res) => {
 };
 
 const delUser = async (req, res) => {
-  // res.send("This is the delete route");
   try {
     const selectedUser = await knex("users")
       .where({ user_id: req.params.id })

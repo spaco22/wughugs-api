@@ -1,11 +1,11 @@
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
+ * @returns { Promise<void> }
  */
 export async function seed(knex) {
   // Deletes ALL existing entries
-  await knex('users').del()
-  await knex('users').insert([
+  await knex("users").del();
+  await knex("users").insert([
     {
       user_id: 1,
       user_firstname: "John",
@@ -18,7 +18,7 @@ export async function seed(knex) {
       user_pass_confirm: "password123",
       user_img: "",
       created_at: "2024-11-25 15:00:00",
-      updated_at: "2024-11-25 15:00:00"
+      updated_at: "2024-11-25 15:00:00",
     },
     {
       user_id: 2,
@@ -32,7 +32,7 @@ export async function seed(knex) {
       user_pass_confirm: "password456",
       user_img: "",
       created_at: "2024-11-25 15:00:00",
-      updated_at: "2024-11-25 15:00:00"
+      updated_at: "2024-11-25 15:00:00",
     },
     {
       user_id: 3,
@@ -46,7 +46,7 @@ export async function seed(knex) {
       user_pass_confirm: "secure789",
       user_img: "",
       created_at: "2024-11-25 15:00:00",
-      updated_at: "2024-11-25 15:00:00"
+      updated_at: "2024-11-25 15:00:00",
     },
     {
       user_id: 4,
@@ -60,7 +60,7 @@ export async function seed(knex) {
       user_pass_confirm: "password111",
       user_img: "",
       created_at: "2024-11-25 15:00:00",
-      updated_at: "2024-11-25 15:00:00"
+      updated_at: "2024-11-25 15:00:00",
     },
     {
       user_id: 5,
@@ -74,8 +74,7 @@ export async function seed(knex) {
       user_pass_confirm: "pass567",
       user_img: "",
       created_at: "2024-11-25 15:00:00",
-      updated_at: "2024-11-25 15:00:00"
-    }
-  ]
-  );
-};
+      updated_at: "2024-11-25 15:00:00",
+    },
+  ]);
+}

@@ -3,7 +3,6 @@ import configuration from "../knexfile.js";
 const knex = initKnex(configuration);
 
 const wugs = async (req, res) => {
-  // res.send("This is the wugs route");
   try {
     const wugsData = await knex("wugs");
     res.json(wugsData);
@@ -17,7 +16,6 @@ const wugs = async (req, res) => {
 };
 
 const wugById = async (req, res) => {
-  // res.send("This is the wugs route");
   try {
     const wugsFound = await knex("wugs")
       .join("users", "wugs.user_id", "=", "users.user_id")
@@ -55,8 +53,6 @@ const wugById = async (req, res) => {
 };
 
 const addWug = async (req, res) => {
-  // res.send("This is the add wug route");
-
   try {
     const wugsData = await knex("wugs").insert(req.body);
     const newWugId = wugsData[0];
@@ -100,7 +96,6 @@ const editWug = async (req, res) => {
 };
 
 const delWug = async (req, res) => {
-  // res.send("This is the delete route");
   try {
     const selectedWug = await knex("wugs")
       .where({ wug_id: req.params.id })
