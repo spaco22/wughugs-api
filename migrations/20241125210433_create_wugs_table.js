@@ -11,6 +11,7 @@ export function up(knex) {
         table.string('wug_type').notNullable();
         table.string('wug_common_names');
         table.string('wug_age');
+        table.string('wug_img');
         table.timestamp('created_at').defaultTo(knex.fn.now());
         table.timestamp('updated_at').defaultTo(knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'))
       });
