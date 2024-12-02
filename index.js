@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 8000;
 
 app.use(cors({ origin: CORS_ORIGIN }));
 app.use(express.json());
+app.use(express.static("public/images"));
 
 app.get("/", (req, res) => {
   res.send("Welcome to the WugHugs backend!");
