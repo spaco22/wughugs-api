@@ -88,6 +88,7 @@ const addUser = async (req, res) => {
   //  }
 
   try {
+    console.log(req.file);
     // const path = req.file;
     // console.log(path);
     // req.body.user_img = path;

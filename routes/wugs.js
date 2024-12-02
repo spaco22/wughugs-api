@@ -1,7 +1,11 @@
 import express from "express";
 import * as wugsController from "../controllers/wugs-controller.js";
 import multer from "multer";
-const upload = multer({ dest: '../public/images' });
+import path from "path";
+
+const upload = multer({
+    dest: path.resolve('public/images'),
+});
 
 const router = express.Router();
 
