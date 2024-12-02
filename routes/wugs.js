@@ -15,12 +15,12 @@ const upload = multer({ storage: storage });
 
 const router = express.Router();
 
-router.route("/").get(wugsController.wugs).post(upload.single("img"), wugsController.addWug);
+router.route("/").get(wugsController.wugs).post(upload.single("wug_img"), wugsController.addWug);
 
 router
   .route("/:id")
   .get(wugsController.wugById)
-  .put(wugsController.editWug)
+  .put(upload.single("wug_img"), wugsController.editWug)
   .delete(wugsController.delWug);
 
 export default router;
