@@ -1,14 +1,24 @@
 import express from "express";
 import * as usersController from "../controllers/users-controller.js";
 import multer from "multer";
-const upload = multer({ dest: "../public/images" });
+
+const storage = multer.diskStorage({
+  destination: "public/images",
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now();
+    const uploadedfileName = uniqueSuffix + "-" + file.originalname;
+    cb(null, uploadedfileName);
+  },
+});
+
+const upload = multer({ storage: storage });
 
 const router = express.Router();
 
 router
   .route("/")
   .get(usersController.users)
-  .post(upload.single("img"), usersController.addUser);
+  .post(upload.single("user_img"), usersController.addUser);
 
 router
   .route("/:id")
