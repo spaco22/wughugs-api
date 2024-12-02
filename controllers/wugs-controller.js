@@ -55,7 +55,7 @@ const wugById = async (req, res) => {
 };
 
 const addWug = async (req, res) => {
-  res.send("This is the add wug route");
+  // res.send("This is the add wug route");
 
   // console.log(req.file);
 
