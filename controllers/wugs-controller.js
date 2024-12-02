@@ -60,6 +60,7 @@ const addWug = async (req, res) => {
   // console.log(req.file);
 
   try {
+    req.body.user_img = req.file.filename;
     const wugsData = await knex("wugs").insert(req.body);
     const newWugId = wugsData[0];
     const newWug = await knex("wugs").where({ wug_id: newWugId }).first();
@@ -80,6 +81,7 @@ const editWug = async (req, res) => {
   // res.send("This is the put route");
 
   try {
+    req.body.user_img = req.file.filename;
     const editWug = await knex("wugs")
       .where({ wug_id: req.params.id })
       .update(req.body);
