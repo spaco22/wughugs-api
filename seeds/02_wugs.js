@@ -14,7 +14,7 @@ export async function seed(knex) {
       wug_type: "Tarantula",
       wug_common_names: "Mexican redleg tarantula",
       wug_age: "3 months",
-      wug_img: "b-emilia.jpg",
+      wug_img: "",
       created_at: "2024-11-25 15:10:00",
       updated_at: "2024-11-25 15:10:00"
     },
@@ -141,7 +141,7 @@ export async function seed(knex) {
     {
       wug_id: 13,
       user_id: 1,
-      wug_name: "Chrlotte",
+      wug_name: "Charlotte",
       wug_species: "Brachypelma auratum",
       wug_type: "Tarantula",
       wug_common_names: "Mexican flame knee tarantula",
