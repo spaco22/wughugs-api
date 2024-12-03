@@ -58,13 +58,13 @@ const userWugs = async (req, res) => {
       .select(
         "wugs.wug_id",
         "wugs.user_id",
-        // "users.user_img",
         "users.user_username",
         "users.user_city",
         "users.user_province",
         "wugs.wug_name",
         "wugs.wug_species",
-        "wugs.wug_type"
+        "wugs.wug_type",
+        "wug.wug_img",
       );
 
     res.status(200).json(userWugs);
