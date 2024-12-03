@@ -9,7 +9,7 @@ export async function seed(knex) {
     {
       wug_id: 1,
       user_id: 1,
-      wug_name: "Monarch",
+      wug_name: "Zuko",
       wug_species: "Brachypelma emilia",
       wug_type: "Tarantula",
       wug_common_names: "Mexican redleg tarantula",
@@ -134,7 +134,7 @@ export async function seed(knex) {
       wug_type: "Tarantula",
       wug_common_names: "Mexican redknee tarantula",
       wug_age: "1 year",
-      wug_img: "b-smithii.jpg",
+      wug_img: "b-smiithi.jpg",
       created_at: "2024-11-25 15:19:00",
       updated_at: "2024-11-25 15:19:00"
     },
@@ -175,7 +175,7 @@ export async function seed(knex) {
       updated_at: "2024-11-25 15:19:00"
     },
     {
-      wug_id: 15,
+      wug_id: 16,
       user_id: 1,
       wug_name: "Zophobas",
       wug_species: "Zophobas atratus",
@@ -187,14 +187,14 @@ export async function seed(knex) {
       updated_at: "2024-11-25 15:19:00"
     },
     {
-      wug_id: 15,
+      wug_id: 17,
       user_id: 1,
       wug_name: "Mini cheetos",
       wug_species: "Yuukianura Aphoruroides ",
       wug_type: "springtail",
       wug_common_names: "Orange springtails",
       wug_age: "3 months",
-      wug_img: "sprintail.jpg",
+      wug_img: "springtail.jpg",
       created_at: "2024-11-25 15:19:00",
       updated_at: "2024-11-25 15:19:00"
     }
