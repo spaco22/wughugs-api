@@ -20,7 +20,7 @@ export async function seed(knex) {
     },
     {
       wug_id: 2,
-      user_id: 1,
+      user_id: 2,
       wug_name: "Rosie",
       wug_species: "Grammostola rosea",
       wug_type: "Tarantula",
@@ -123,6 +123,78 @@ export async function seed(knex) {
       wug_common_names: "Arizona Bark Scorpion, Bark Scorpion",
       wug_age: "6 months",
       wug_img: "",
+      created_at: "2024-11-25 15:19:00",
+      updated_at: "2024-11-25 15:19:00"
+    },
+    {
+      wug_id: 12,
+      user_id: 1,
+      wug_name: "Charlie",
+      wug_species: "Brachypelma smithii",
+      wug_type: "Tarantula",
+      wug_common_names: "Mexican redknee tarantula",
+      wug_age: "1 year",
+      wug_img: "b-smithii.jpg",
+      created_at: "2024-11-25 15:19:00",
+      updated_at: "2024-11-25 15:19:00"
+    },
+    {
+      wug_id: 13,
+      user_id: 1,
+      wug_name: "Chrlotte",
+      wug_species: "Brachypelma auratum",
+      wug_type: "Tarantula",
+      wug_common_names: "Mexican flame knee tarantula",
+      wug_age: "1 year",
+      wug_img: "b-auratum.jpg",
+      created_at: "2024-11-25 15:19:00",
+      updated_at: "2024-11-25 15:19:00"
+    },
+    {
+      wug_id: 14,
+      user_id: 1,
+      wug_name: "MANduca",
+      wug_species: "Manduca quinquemaculata",
+      wug_type: "moth",
+      wug_common_names: "Tomatoe hornworm",
+      wug_age: "3 months",
+      wug_img: "manduca-hornworm.jpg",
+      created_at: "2024-11-25 15:19:00",
+      updated_at: "2024-11-25 15:19:00"
+    },
+    {
+      wug_id: 15,
+      user_id: 1,
+      wug_name: "Meal wormies",
+      wug_species: "Tenebrio molitor",
+      wug_type: "beetle",
+      wug_common_names: "Meal hornworm, yellow mealworm beetle, darkling beetle",
+      wug_age: "7 months",
+      wug_img: "mealworm.jpg",
+      created_at: "2024-11-25 15:19:00",
+      updated_at: "2024-11-25 15:19:00"
+    },
+    {
+      wug_id: 15,
+      user_id: 1,
+      wug_name: "Zophobas",
+      wug_species: "Zophobas atratus",
+      wug_type: "beetle",
+      wug_common_names: "Super worm, king worm",
+      wug_age: "1 months",
+      wug_img: "superworm.jpg",
+      created_at: "2024-11-25 15:19:00",
+      updated_at: "2024-11-25 15:19:00"
+    },
+    {
+      wug_id: 15,
+      user_id: 1,
+      wug_name: "Mini cheetos",
+      wug_species: "Yuukianura Aphoruroides ",
+      wug_type: "springtail",
+      wug_common_names: "Orange springtails",
+      wug_age: "3 months",
+      wug_img: "sprintail.jpg",
       created_at: "2024-11-25 15:19:00",
       updated_at: "2024-11-25 15:19:00"
     }
