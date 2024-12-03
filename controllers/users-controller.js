@@ -64,7 +64,7 @@ const userWugs = async (req, res) => {
         "wugs.wug_name",
         "wugs.wug_species",
         "wugs.wug_type",
-        "wug.wug_img",
+        "wugs.wug_img",
       );
 
     res.status(200).json(userWugs);
