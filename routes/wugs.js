@@ -23,4 +23,8 @@ router
   .put(upload.single("wug_img"), wugsController.editWug)
   .delete(wugsController.delWug);
 
+
+router
+.route("/:id/journals").get(wugsController.wugJournals);
+
 export default router;
