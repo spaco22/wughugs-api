@@ -14,8 +14,8 @@ export async function seed(knex) {
       user_city: "Hornby Island",
       user_province: "BC",
       user_email: "paco.sofia22@gmail.com",
-      user_pass: "password123",
-      user_pass_confirm: "password123",
+      user_pass: "pass",
+      user_pass_confirm: "pass",
       user_img: "sofia.jpeg",
       created_at: "2024-11-25 15:00:00",
       updated_at: "2024-11-25 15:00:00"
