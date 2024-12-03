@@ -19,5 +19,5 @@ export function up(knex) {
  * @returns { Promise<void> }
  */
 export function down(knex) {
-    return knex.schema.dropTableIfExists('wugs');
+    return knex.schema.dropTableIfExists('journals');
 };
