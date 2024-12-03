@@ -58,6 +58,7 @@ const userWugs = async (req, res) => {
       .select(
         "wugs.wug_id",
         "wugs.user_id",
+        // "users.user_img",
         "users.user_username",
         "users.user_city",
         "users.user_province",

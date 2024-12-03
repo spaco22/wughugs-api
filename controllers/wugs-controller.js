@@ -25,6 +25,7 @@ const wugById = async (req, res) => {
       .select(
         "wugs.wug_id",
         "wugs.user_id",
+        "users.user_img",
         "users.user_username",
         "users.user_city",
         "users.user_province",
@@ -32,7 +33,8 @@ const wugById = async (req, res) => {
         "wugs.wug_species",
         "wugs.wug_type",
         "wugs.wug_common_names ",
-        "wugs.wug_age "
+        "wugs.wug_age ",
+         "wugs.wug_img "
       );
 
     if (wugsFound.length === 0) {
