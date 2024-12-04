@@ -16,6 +16,9 @@ const upload = multer({ storage: storage });
 const router = express.Router();
 
 router
-  .route("/").get(journalsController.journals);
+  .route("/").get(journalsController.journals).post(journalsController.addJournal);
+
+router
+  .route("/:id").get(journalsController.journalById).put(journalsController.editJournal).delete(journalsController.delJournal);
 
   export default router;
