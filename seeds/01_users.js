@@ -10,7 +10,7 @@ export async function seed(knex) {
       user_id: 1,
       user_firstname: "Sofia",
       user_lastname: "Paco",
-      user_username: "sofi",
+      user_username: "sofia",
       user_city: "Hornby Island",
       user_province: "BC",
       user_email: "paco.sofia22@gmail.com",
