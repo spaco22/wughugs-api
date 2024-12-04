@@ -20,22 +20,18 @@ const journals = async (req, res) => {
     // res.send("This is the journal by ID route");
     try {
         const journalsFound = await knex("journals")
-        //   .join("users", "wugs.user_id", "=", "users.user_id")
+          .join("users", "journals.user_id", "=", "users.user_id")
           .where({ journal_id: req.params.id })
-        //   .select(
-        //     "wugs.wug_id",
-        //     "wugs.user_id",
-        //     "users.user_img",
-        //     "users.user_username",
-        //     "users.user_city",
-        //     "users.user_province",
-        //     "wugs.wug_name",
-        //     "wugs.wug_species",
-        //     "wugs.wug_type",
-        //     "wugs.wug_common_names ",
-        //     "wugs.wug_age ",
-        //      "wugs.wug_img "
-        //   );
+          .select(
+            "users.user_username",
+            "journals.wug_id",
+            "journals.user_id",
+            "journals.journal_id",
+            "journals.title",
+            "journals.text",
+            "journals.date_created",
+            "journals.img",
+          );
     
         if (journalsFound.length === 0) {
           return res.status(404).json({
