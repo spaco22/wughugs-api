@@ -74,16 +74,29 @@ const journals = async (req, res) => {
   };
 
   const editJournal = async (req, res) => {
-    // try {
-    //   const journalsData = await knex("journals");
-    //   res.status(200).json(journalsData);
-    // } catch (error) {
-    //   console.error("Error retrieving journals data", error);
-    //   res.status(400).json({
-    //     message: "Error retrieving journals data",
-    //     status: 400,
-    //   });
-    // }
+    try {
+        if(req.file) {
+          req.body.journal_img = req.file.filename;
+        }
+        const editJournal = await knex("journals")
+          .where({ journal_id: req.params.id })
+          .update(req.body);
+    
+        const editedJournal = await knex("journals")
+          .where({ journal_id: req.params.id })
+          .first();
+    
+        res.status(200).json({
+          message: "Journal succesfully updated",
+          status: 200,
+          updated_wug: editedJournal,
+        });
+      } catch (error) {
+        console.error(`Error updating journal with id: ${req.params.id}`, error);
+        res.status(500).json({
+          message: `Error updating journal with id: ${req.params.id}`,
+        });
+      }
   };
 
   const delJournal = async (req, res) => {
