@@ -53,16 +53,24 @@ const journals = async (req, res) => {
   };
 
   const addJournal = async (req, res) => {
-    // try {
-    //   const journalsData = await knex("journals");
-    //   res.status(200).json(journalsData);
-    // } catch (error) {
-    //   console.error("Error retrieving journals data", error);
-    //   res.status(400).json({
-    //     message: "Error retrieving journals data",
-    //     status: 400,
-    //   });
-    // }
+    try {
+        if(req.file) {
+          req.body.journal_img = req.file.filename;
+        }
+        const journalsData = await knex("journals").insert(req.body);
+        const newJournalId = journalsData[0];
+        const newJournal = await knex("journals").where({ journal_id: newJournalId }).first();
+        res.status(201).json({
+          message: "New journal succesfully added!",
+          newJournal,
+        });
+      } catch (error) {
+        console.error("Error adding new journal", error);
+        res.status(500).json({
+          message: "Error adding new journal",
+          status: 500,
+        });
+      }
   };
 
   const editJournal = async (req, res) => {
