@@ -1,5 +1,5 @@
 import express from "express";
-import * as wugsController from "../controllers/wugs-controller.js";
+import * as journalsController from "../controllers/journals-controller.js";
 import multer from "multer";
 
 const storage = multer.diskStorage({
@@ -15,16 +15,10 @@ const upload = multer({ storage: storage });
 
 const router = express.Router();
 
-router.route("/").get(wugsController.wugs).post(upload.single("wug_img"), wugsController.addWug);
+router
+  .route("/").get(journalsController.journals).post(journalsController.addJournal);
 
 router
-  .route("/:id")
-  .get(wugsController.wugById)
-  .put(upload.single("wug_img"), wugsController.editWug)
-  .delete(wugsController.delWug);
+  .route("/:id").get(journalsController.journalById).put(journalsController.editJournal).delete(journalsController.delJournal);
 
-
-router
-.route("/:id/journals").get(wugsController.wugJournals);
-
-export default router;
+  export default router;

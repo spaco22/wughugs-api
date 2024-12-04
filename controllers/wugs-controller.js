@@ -135,4 +135,42 @@ const delWug = async (req, res) => {
   }
 };
 
-export { wugs, wugById, addWug, editWug, delWug };
+const wugJournals = async (req, res) => {
+  // res.send("This is the get wug journals route");
+  try {
+    const wugsFound = await knex("wugs").where({ wug_id: req.params.id });
+
+    if (wugsFound.length === 0) {
+      return res.status(404).json({
+        message: `Wug with ID ${req.params.id} not found`,
+        status: 404,
+      });
+    }
+
+    const wugJournals = await knex("wugs")
+      .where({ "wugs.wug_id": req.params.id })
+      .join("journals", "journals.wug_id", "=", "wugs.wug_id")
+      .select(
+        "wugs.wug_id",
+        "wugs.wug_name",
+        "journals.journal_id",
+        "journals.title",
+        "journals.text",
+        "journals.date_created",
+        "journals.img",
+      );
+
+    res.status(200).json(wugJournals);
+  } catch (error) {
+    console.error(
+      `Error retrieving journals for wug with ID ${req.params.id}`,
+      error
+    );
+    res.status(400).json({
+      message: `Error retrieving journals for wug with ID ${req.params.id}`,
+      status: 400,
+    });
+  }
+};
+
+export { wugs, wugById, addWug, editWug, delWug, wugJournals };

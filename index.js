@@ -1,6 +1,7 @@
 import express from "express";
 import usersRoute from "./routes/users.js";
 import wugsRoute from "./routes/wugs.js";
+import journalsRoute from "./routes/journals.js";
 import cors from "cors";
 
 const app = express();
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 
 app.use("/users", usersRoute);
 app.use("/wugs", wugsRoute);
+app.use("/journals", journalsRoute);
 
 app.listen(PORT, () => {
   console.log(`Listening at PORT ${PORT}`);
