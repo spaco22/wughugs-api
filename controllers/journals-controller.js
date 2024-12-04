@@ -100,16 +100,28 @@ const journals = async (req, res) => {
   };
 
   const delJournal = async (req, res) => {
-    // try {
-    //   const journalsData = await knex("journals");
-    //   res.status(200).json(journalsData);
-    // } catch (error) {
-    //   console.error("Error retrieving journals data", error);
-    //   res.status(400).json({
-    //     message: "Error retrieving journals data",
-    //     status: 400,
-    //   });
-    // }
+    try {
+        const selectedJournal = await knex("journals")
+          .where({ journal_id: req.params.id })
+          .delete();
+    
+        if (selectedJournal === 0) {
+          return res.status(404).json({
+            message: `Journal with ID ${req.params.id} not found`,
+            status: 404,
+          });
+        }
+        res.json({
+          message: `Journal with ID ${req.params.id} successfully deleted`,
+          status: 204,
+        });
+      } catch (error) {
+        console.error(`Error deleting journal with ID ${req.params.id}`, error);
+        res.status(500).json({
+          message: `Error deleting journal with ID ${req.params.id}`,
+          status: 500,
+        });
+      }
   };
 
 export { journals, journalById, addJournal, editJournal, delJournal };
