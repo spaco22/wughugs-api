@@ -12,7 +12,7 @@ export async function seed(knex) {
         user_id: 1,
         title: "Zuko's First Meal",
         text: "Zuko finally ate his first cricket in his new home! It was such a relief to see him settling in.",
-        date_created: "2024-12-01 08:30:00",
+        date_created: "2024-11-01 08:30:00",
         img: "zuko-eating.jpg"
       },
       {
@@ -21,7 +21,7 @@ export async function seed(knex) {
         user_id: 1,
         title: "Exploring His Terrarium",
         text: "Zuko spent the day exploring every corner of his terrarium. He seems to enjoy the moss I added!",
-        date_created: "2024-12-02 10:00:00",
+        date_created: "2024-11-02 10:00:00",
         img: "zuko-exploring.jpg"
       },
       {
